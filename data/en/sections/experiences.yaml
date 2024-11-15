@@ -1,0 +1,60 @@
+section:
+  name: Professional Experience
+  id: experiences 
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true 
+
+experiences:
+- company:
+    name: Core42
+    url: "https://www.linkedin.com/company/core42ai"
+    location: Abu Dhabi, UAE
+    logo: /images/experiences/core42.png
+    # company overview
+    overview: National-scale enabler for cloud and generative AI
+  positions:
+  - designation: Cloud Support Engineer
+    start: September 2020
+    responsibilities:
+    - Supported over 300 cloud environments with a combined user base exceeding 5000.
+    - Used GitLab, forgejo actions and ansible-semaphore for CI/CD pipelines
+    - Performed routine cloud server maintenance tasks for IaaS (using RHEL and Ubuntu Operating Systems), such as monitoring performance, checking logs, updating software, and installing patches.
+    - Used Ansible, Terraform and Pulumi for provisioning resources in multi-cloud environments
+
+- company:
+    name: ValueMentor
+    url: "https://www.linkedin.com/company/valuementor"
+    location: Dubai, UAE
+    logo: /images/experiences/valuementor.jpg
+    overview: A comprehensive cybersecurity company that manages IT security for organizations, including consulting, advisory, testing, operations, and engineering services.
+  positions:
+  - designation: Systems Engineer
+    start: January 2019
+    end: July 2020
+    responsibilities:
+    - Created streaming ETL pipeline, enriching data with threat intelligence using Apache Kafka and MISP
+    - Converted infrastructure docs to IaC using GitLab for version control, Ansible for configuration, Terraform for IaC, Docker for app deployment, Packer for automating image builds
+    - Achieved 99.9% uptime by successfully implementing redundant systems and failover protocols
+    - Reduced infrastructure and licensing costs by migrating to a Proxmox (KVM) Cluster
+    - Managed 100+ Linux servers and containerized services
+
+- company:
+    name: Ion Management Solutions 
+    url: "https://www.linkedin.com/company/ion-management-solutions-inc-/"
+    location: Makati, Philippines
+    overview:  IT Management Design, Deployment & Support with proven specialized skills in Virtualization and managing large, complex or critical IT infrastructure
+  positions:
+  - designation: Information Security Engineer
+    start: October 2017
+    end: January 2019
+    responsibilities:
+    - Technical Lead for Security Information and Event Management (SIEM) deployments
+  - designation: Information Security Analyst
+    start: May 2016
+    end: October 2017
+    responsibilities:
+    - Fine-tuned threat detection systems (SIEM, IPS)
+    - Installed security solutions, firewall, SIEM, IPS/IDS, NACs on customer sites
