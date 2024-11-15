@@ -1,0 +1,92 @@
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+
+designation: Cloud Support Engineer
+
+company:
+  name: Core42
+  url: "https://www.linkedin.com/company/core42ai/"
+
+#this file path should be relative to you "static" directory
+resume: "files/resume/alain-igban-resume.pdf"
+
+# a summary about you
+summary: 'I am a Certified Cloud Engineer with seven years of experience in designing and maintaining cloud infrastructure solutions using AWS, Azure and private-cloud environments. Managed 300+ cloud environments serving 5000+ users. Expert in Kubernetes troubleshooting, CI/CD implementation, and IaaS management. Skilled in infrastructure-as-code with Ansible, Terraform, and Pulumi. Developed serverless solutions using AWS Lambda and Azure Functions.'
+socialLinks:
+- name: Email
+  icon: "fas fa-envelope"
+  url: "alain@apigban.com"
+
+- name: Github
+  icon: "fab fa-github"
+  url: "https://github.com/apigban"
+
+# - name: Stackoverflow
+#   icon: "fab fa-stack-overflow"
+#   url: "#"
+
+- name: LinkedIn
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/apigban/"
+
+# - name: Twitter
+#   icon: "fab fa-twitter"
+#   url: "#"
+
+# - name: Facebook
+#   icon: "fab fa-facebook"
+#   url: "#"
+
+# Show your badges
+# You can show your verifiable certificates from https://www.credly.com.
+# You can also show a circular bar indicating the level of expertise on a certain skill
+badges:
+- type: certification
+  name: CKS - Certified Kubernetes Security Specialist
+  url: "https://www.credly.com/badges/ead62aa0-0cb0-45e0-a5bb-0fa859294223"
+  badge: "https://images.credly.com/size/680x680/images/9945dfcb-1cca-4529-85e6-db1be3782210/kubernetes-security-specialist-logo2.png"
+
+- type: certification
+  name: CKA - Certified Kubernetes Administrator
+  url: "https://www.credly.com/badges/da659cb9-2d15-416f-bda2-7c82ad20bd54"
+  badge: "https://images.credly.com/size/680x680/images/8b8ed108-e77d-4396-ac59-2504583b9d54/cka_from_cncfsite__281_29.png"
+
+- type: certification
+  name: CKAD- Certified Kubernetes Application Developer
+  url: "https://www.credly.com/earner/earned/badge/401158d9-9fb6-476c-867b-9060221326dd"
+  badge: "https://images.credly.com/size/680x680/images/cc8adc83-1dc6-4d57-8e20-22171247e052/blob"
+
+- type: certification
+  name: RHCE - Red Hat Certified Engineer
+  url: "https://www.credly.com/badges/0847956b-1e50-42f9-99fc-02ee2ba98b0b/public_url"
+  badge: "https://images.credly.com/size/220x220/images/19c4e804-54fe-4857-b022-7cfd5520596c/image.png"
+
+- type: certification
+  name: RHCSA - Red Hat Certified System Administrator (RHCSA)
+  url: "https://www.credly.com/earner/earned/badge/9e0b5ae0-c6d5-41c5-9db3-d32bdd86e209"
+  badge: "https://images.credly.com/size/680x680/images/572de0ba-2c59-4816-a59d-b0e1687e45ee/image.png"
+
+- type: certification
+  name: HashiCorp Certified - Terraform Associate
+  url: "https://www.credly.com/earner/earned/badge/825e541c-aa53-4911-8ff4-4e1c2f9638a0"
+  badge: "https://images.credly.com/size/680x680/images/99289602-861e-4929-8277-773e63a2fa6f/image.png"
+
+- type: certification
+  name: Microsoft Certified - Azure Solutions Architect Expert
+  url: "https://learn.microsoft.com/api/credentials/share/en-us/49394052/FB3ACE195F92D5D8?sharingId=6C804FE31FA12D1"
+  badge: "https://images.credly.com/size/680x680/images/987adb7e-49be-4e24-b67e-55986bd3fe66/azure-solutions-architect-expert-600x600.png"
+
+- type: certification
+  name:  Microsoft Certified - Azure Administrator Associate 
+  url: "https://learn.microsoft.com/api/credentials/share/en-us/49394052/A77596BE670A63A6?sharingId=6C804FE31FA12D1"
+  badge: "https://images.credly.com/size/680x680/images/336eebfc-0ac3-4553-9a67-b402f491f185/azure-administrator-associate-600x600.png"
+
+- type: certification
+  name: AWS Certified Solutions Architect – Associate
+  url: "https://www.credly.com/earner/earned/badge/b223aecd-77ef-4e1d-bd4f-11bd89355689"
+  badge: "https://images.credly.com/size/680x680/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"

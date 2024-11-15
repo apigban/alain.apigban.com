@@ -1,0 +1,18 @@
+name: "Alain Igban"
+nickname: "Alain"
+
+greeting: "Hello, I'm"
+image: "images/author/apigban.png"
+
+contactInfo:
+  email: "alain@apigban.com"
+  phone: "+971 564359497"
+  github: apigban
+  linkedin: apigban
+
+summary:
+  - I am a Cloud Engineer
+  - I cosplay as a Sysadmin at home
+  - I love tinkering on my homelab
+  - I work on open-source projects
+  - I love to work with fun automation projects
