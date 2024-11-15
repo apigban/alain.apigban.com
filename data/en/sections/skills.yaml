@@ -1,0 +1,40 @@
+# section information
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 5
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  hideTitle: true
+
+skills:
+- name: Systems Administration
+  logo: /images/sections/skills/rh1.png
+  summary: "I'm proficient in Linux tools, scripting, system operations, storage, networking, and security. I can manage users, deploy systems, and work with containers, ensuring efficient Red Hat Enterprise Linux administration."
+  url: "https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9"
+
+- name: Kubernetes
+  logo: /images/sections/skills/k8s.png
+  summary: "I manage containerized applications. My skills include orchestration, architecture, networking, and security. I implement CI/CD pipelines and monitoring systems, ensuring efficient management of distributed environments and smooth application performance."
+  url: "https://kubernetes.io/"
+
+- name: Ansible | Molecule
+  logo: /images/sections/skills/ansible.png
+  summary: "I am capable of Linux Administration tasks and Ansible automation. I can configure control nodes, manage playbooks, use roles and collections, and automate system administration tasks efficiently using Ansible modules and best practices."
+  url: "https://docs.ansible.com/"
+
+- name: Prometheus | Grafana
+  logo: /images/sections/skills/prometheus.png
+  summary: "Capable of installation and configuration of metrics scraping and alerting for service monitoring."
+  url: "https://prometheus.io/docs/visualization/grafana/"
+
+- name: Networking
+  logo: /images/sections/skills/net.png
+  summary: "Capable of installation and configuration of hybrid (on-premises and cloud) networks."
+  url: ""
+
+- name: Go Development
+  logo: /images/sections/skills/go.png
+  summary: "Capable of writing and deploying glue scripts for data processing"
+  url: "https://go.dev/"
