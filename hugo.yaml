@@ -1,4 +1,4 @@
-baseURL: https://hugo-toha.github.io
+baseURL: https://alain.apigban.com
 
 languageCode: en-us
 title: "Alain Igban"
@@ -49,11 +49,13 @@ enableEmoji: true
 # Site parameters
 params:
   # GitHub repo URL of your site
-  gitRepo: https://git.home.apigban.com/apigban/alain.apigban.com.git
+  gitRepo: https://github.com/apigban/alain.apigban.com
 
   background: "images/background/bg.png"
 
   features:
+    darkMode:
+      enable: true
     # Enable portfolio section
     portfolio:
       enable: true
@@ -68,4 +70,4 @@ params:
 
   # Configure footer
   footer:
-    enable: true
+    enable: True
