@@ -1,7 +1,5 @@
 # Automating Netbox Deployment with Ansible and Podman
 
-## Introduction
-
 Having a reliable source of truth for my infrastructure design is important. While enterprises often use AWS Systems Manager Inventory for this purpose, homelab environments need a more accessible solution. This is where Netbox comes in - an open-source infrastructure resource modeling tool that can serve as a powerful alternative for homelab environments.
 
 ## Why Netbox for My Homelab?
