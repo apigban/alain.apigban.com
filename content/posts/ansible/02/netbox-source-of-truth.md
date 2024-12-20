@@ -1,3 +1,14 @@
+---
+title: "Automating Netbox Deployment with Ansible and Podman"
+date: 2024-11-19T16:00:00+04:00
+hero: images/posts/ansible-02/netbox01.png
+menu:
+  sidebar:
+    name: Netbox Deployment using Ansible and Podman
+    identifier: automating-netbox-deployment-with-ansible-and-podman
+    parent: Ansible
+    weight: 10
+---
 # Automating Netbox Deployment with Ansible and Podman
 
 Having a reliable source of truth for my infrastructure design is important. While enterprises often use AWS Systems Manager Inventory for this purpose, homelab environments need a more accessible solution. This is where Netbox comes in - an open-source infrastructure resource modeling tool that can serve as a powerful alternative for homelab environments.
