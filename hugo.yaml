@@ -54,6 +54,13 @@ params:
   background: "images/background/bg.png"
 
   features:
+    analytics:
+      enable: true
+        services:
+          umami:
+            scheme: https
+            instance: cloud.umami.is
+            id: f8f172e4-acb6-4222-8379-eb95d04d6630
     darkMode:
       enable: true
     # Enable portfolio section
