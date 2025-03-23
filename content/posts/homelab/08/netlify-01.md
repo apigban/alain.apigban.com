@@ -4,7 +4,7 @@ date: 2025-03-16T02:02:06+04:00
 hero: images/posts/homelab-08/netlify-02.png
 menu: 
   sidebar:
-    name: Deployment of Portfolio Website on Netlify
+    name: Caddy Proxy reconfiguration
     identifier: netlify-01
     parent: Homelab
     weight: 10
