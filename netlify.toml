@@ -1,0 +1,10 @@
+[build]
+  base = "."
+  command = "go version; node --version; npm --version; hugo"
+  publish = "./public"
+
+[build.environment]
+  GO_VERSION = "1.23"
+  HUGO_ENV = "production"
+  HUGO_VERSION = "0.138.0"
+  TZ = "Asia/Dubai"
