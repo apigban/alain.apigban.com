@@ -6,5 +6,5 @@
 [build.environment]
   GO_VERSION = "1.25.4"
   HUGO_ENV = "production"
-  HUGO_VERSION = "0.152.2+extended"
+  HUGO_VERSION = "0.152.2"
   TZ = "Asia/Dubai"
