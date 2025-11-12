@@ -2,6 +2,7 @@
 title: "Working with Stacked Loops in Ansible"
 date: 2024-11-19T16:00:00+04:00
 hero: images/posts/ansible-01/0101.png
+featured: true
 menu:
   sidebar:
     name: Stacked Loops
