@@ -2,6 +2,7 @@
 title: "Automating Netbox Deployment with Ansible and Podman"
 date: 2024-11-19T16:00:00+04:00
 hero: images/posts/ansible-02/netbox01.png
+featured: true
 menu:
   sidebar:
     name: Netbox Deployment using Ansible and Podman

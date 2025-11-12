@@ -2,6 +2,7 @@
 title: "My Method for Testing Ansible Roles with Molecule and Proxmox Driver"
 date: 2024-12-20T08:00:00+04:00
 hero: images/posts/ansible-03/ansible01.png
+featured: true
 menu:
   sidebar:
     name: Testing Ansible Roles

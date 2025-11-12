@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+    <title>{{- .Site.Title -}}</title>
+    {{ partial "header.html" . }}
+    {{ partial "opengraph.html" . }}
+    {{ partial "analytics.html" . }}
+    {{ with resources.Get "scripts/core/theme-scheme.js" | fingerprint }}
+    <script integrity="{{.Data.Integrity}}">
+     {{ .Content | safeJS }}
+    </script>
+    {{ end }}
+</head>
+<body data-bs-spy="scroll" data-bs-target="#top-navbar" data-bs-offset="100">
+
+    {{ partial "navigators/navbar.html" . }}
+
+    <div id="content-panel" class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="container-fluid section-holder d-flex bg-primary">
+                    <div class="container-fluid-xl">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h1>Hello, I'm Alain...</h1>
+                                <a href="/files/resume.pdf" class="btn btn-primary" target="_blank">View Resume</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid section-holder d-flex bg-secondary">
+                    <div class="container-fluid-xl">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h2>Featured Case Studies</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="row">
+                            {{ range first 3 (where .Site.RegularPages "Params.featured" true) }}
+                            <div class="col-md-4">
+                                <div class="card">
+                                    {{ with .Params.hero }}
+                                    <img src="{{ . | relURL }}" class="card-img-top" alt="{{ $.Title }}">
+                                    {{ end }}
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ .Title }}</h5>
+                                        <p class="card-text">{{ .Summary | truncate 100 }}</p>
+                                        {{ with .Params.tags }}
+                                        <p>
+                                            {{ range . }}
+                                            <span class="badge bg-primary">{{ . }}</span>
+                                            {{ end }}
+                                        </p>
+                                        {{ end }}
+                                        <a href="{{ .Permalink }}" class="btn btn-primary">View Case Study →</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid section-holder d-flex bg-primary">
+                    <div class="container-fluid-xl">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h2>Latest from the Blog</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            {{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Params.featured" "!=" true) }}
+                            <div class="col-md-4">
+                                <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                                <p>{{ .Summary }}</p>
+                            </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{ partial "footer.html" . }}
+    {{ partial "scripts.html" . }}
+    {{ partial "misc/support.html" . }}
+
+</body>
+</html>
