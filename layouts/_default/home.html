@@ -1,0 +1,22 @@
+{{ define "main" }}
+  <!-- Enhanced Hero Section -->
+  {{ partial "sections/hero.html" . }}
+
+  <!-- Render other sections -->
+  {{ $sections := .Site.Params.sections }}
+  {{ range $key, $value := $sections }}
+    {{ if eq $key "about" }}
+      {{ partial "sections/about.html" . }}
+    {{ else if eq $key "experiences" }}
+      {{ partial "sections/experiences.html" . }}
+    {{ else if eq $key "education" }}
+      {{ partial "sections/education.html" . }}
+    {{ else if eq $key "projects" }}
+      {{ partial "sections/projects.html" . }}
+    {{ else if eq $key "achievements" }}
+      {{ partial "sections/achievements.html" . }}
+    {{ else if eq $key "recent-posts" }}
+      {{ partial "sections/recent-posts.html" . }}
+    {{ end }}
+  {{ end }}
+{{ end }}

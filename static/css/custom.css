@@ -222,3 +222,206 @@ blockquote {
   border-left: 4px solid #0066cc;
   background-color: #f8f9fa;
 }
+
+/* Hero Section Enhancements */
+.home {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Enhanced background with overlay */
+#homePageBackgroundImageDivStyled::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.home .container.content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Improved author image styling */
+.home img.rounded-circle {
+  width: 180px;
+  height: 180px;
+  border: 5px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  animation: fadeInDown 1s ease-out;
+}
+
+/* Enhanced greeting styling */
+.home .greeting {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* Typing animation improvements */
+.typing-carousel {
+  font-size: 1.5rem;
+  color: #fff;
+  min-height: 2em;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Tagline styling */
+.hero-tagline {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+/* Action buttons */
+.hero-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-out 0.9s both;
+}
+
+.hero-actions .btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.hero-actions .btn-primary {
+  background-color: #0066cc;
+  border-color: #0066cc;
+  color: #fff;
+}
+
+.hero-actions .btn-primary:hover {
+  background-color: #0052a3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+}
+
+.hero-actions .btn-outline-primary {
+  border-color: #fff;
+  color: #fff;
+  background-color: transparent;
+}
+
+.hero-actions .btn-outline-primary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Social links in hero */
+.hero-social {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  animation: fadeInUp 1s ease-out 1.2s both;
+}
+
+.hero-social a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.hero-social a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  color: #fff;
+}
+
+/* Dark mode adjustments */
+html[data-theme='dark'] .hero-social a {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme='dark'] .hero-social a:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile responsiveness for hero */
+@media (max-width: 768px) {
+  .home .greeting {
+    font-size: 2.5rem;
+  }
+
+  .typing-carousel {
+    font-size: 1.2rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-actions .btn {
+    width: 200px;
+  }
+
+  .home img.rounded-circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero-social {
+    gap: 15px;
+  }
+
+  .hero-social a {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

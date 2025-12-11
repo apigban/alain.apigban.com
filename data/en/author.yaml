@@ -3,6 +3,7 @@ nickname: "Alain"
 
 greeting: "Hello, I'm"
 image: "images/author/apigban.png"
+backgroundImage: "/images/background/bg.png"
 
 contactInfo:
   email: "alain@apigban.com"
@@ -11,8 +12,20 @@ contactInfo:
   linkedin: apigban
 
 summary:
-  - I am a Cloud Engineer
-  - I cosplay as a Sysadmin at home
-  - I love tinkering on my homelab
-  - I work on open-source projects
-  - I love to work with fun automation projects
+  - "I am a Cloud Support Engineer at Core42"
+  - "Passionate about infrastructure automation"
+  - "Experienced in managing complex homelab environments"
+  - "Active contributor to open-source communities"
+  - "Specializing in DevOps and cloud solutions"
+
+# Value proposition
+tagline: "Building scalable cloud solutions and automating infrastructure"
+
+# Quick actions for hero section
+quickActions:
+  - label: "View Projects"
+    url: "#projects"
+    style: "btn-primary"
+  - label: "Read Blog"
+    url: "/posts"
+    style: "btn-outline-primary"

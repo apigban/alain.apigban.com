@@ -84,3 +84,6 @@ params:
 
   # Custom CSS for readability improvements
   customCSS: ["css/custom.css"]
+
+  # Custom JavaScript for hero enhancements
+  customJS: ["js/hero-enhancements.js"]

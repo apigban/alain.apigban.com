@@ -1,0 +1,146 @@
+<section id="home" class="home">
+  <!-- Background Image with responsive styles -->
+  <style>
+    {{ $bg := .Site.Data.author.backgroundImage }}
+    {{ if $bg }}
+      #homePageBackgroundImageDivStyled {
+        background-image: url('{{ $bg }}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      /* Responsive background images for different screen sizes */
+      @media (max-width: 480px) {
+        #homePageBackgroundImageDivStyled {
+          background-image: url('/images/background/bg_hu_503cdc396c38c550.png');
+        }
+      }
+
+      @media (min-width: 481px) and (max-width: 768px) {
+        #homePageBackgroundImageDivStyled {
+          background-image: url('/images/background/bg_hu_39aee7ffeac9cfdc.png');
+        }
+      }
+
+      @media (min-width: 769px) and (max-width: 1024px) {
+        #homePageBackgroundImageDivStyled {
+          background-image: url('/images/background/bg_hu_6dca053c5ee00a69.png');
+        }
+      }
+
+      @media (min-width: 1025px) {
+        #homePageBackgroundImageDivStyled {
+          background-image: url('/images/background/bg_hu_267893f0b6f3da70.png');
+        }
+      }
+    {{ end }}
+  </style>
+
+  <div id="homePageBackgroundImageDivStyled" class="background container-fluid"></div>
+
+  <div class="container content text-center">
+    <!-- Author Image with proper alt text -->
+    <img src="{{ .Site.Data.author.image | absURL }}"
+         alt="{{ .Site.Data.author.name }} - Cloud Support Engineer"
+         class="rounded-circle mx-auto d-block img-fluid">
+
+    <!-- Greeting -->
+    <h1 class="greeting">
+      {{ .Site.Data.author.greeting }} {{ .Site.Data.author.nickname }}
+    </h1>
+
+    <!-- Tagline -->
+    {{ if .Site.Data.author.tagline }}
+      <p class="hero-tagline">{{ .Site.Data.author.tagline }}</p>
+    {{ end }}
+
+    <!-- Typing Carousel -->
+    <div class="typing-carousel" role="text" aria-live="polite" aria-label="Animated introduction">
+      <span id="typed" class="typed" aria-hidden="true"></span>
+      <span class="ityped-cursor" aria-hidden="true">|</span>
+    </div>
+
+    <!-- Hidden data for typing animation -->
+    <ul id="typing-carousel-data" style="display: none;" aria-hidden="true">
+      {{ range .Site.Data.author.summary }}
+        <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+
+    <!-- Action Buttons -->
+    {{ if .Site.Data.author.quickActions }}
+      <div class="hero-actions">
+        {{ range .Site.Data.author.quickActions }}
+          <a href="{{ .url | relLangURL }}"
+             class="btn {{ .style }}"
+             role="button">
+            {{ .label }}
+          </a>
+        {{ end }}
+      </div>
+    {{ end }}
+
+    <!-- Social Links -->
+    {{ if .Site.Data.author.contactInfo }}
+      <div class="hero-social">
+        {{ if .Site.Data.author.contactInfo.github }}
+          <a href="https://github.com/{{ .Site.Data.author.contactInfo.github }}"
+             aria-label="GitHub Profile"
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+          </a>
+        {{ end }}
+        {{ if .Site.Data.author.contactInfo.linkedin }}
+          <a href="https://linkedin.com/in/{{ .Site.Data.author.contactInfo.linkedin }}"
+             aria-label="LinkedIn Profile"
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        {{ end }}
+        {{ if .Site.Data.author.contactInfo.email }}
+          <a href="mailto:{{ .Site.Data.author.contactInfo.email }}"
+             aria-label="Email Contact">
+            <i class="fas fa-envelope"></i>
+          </a>
+        {{ end }}
+      </div>
+    {{ end }}
+
+    <!-- Scroll Down Arrow -->
+    {{ if .Site.Params.sections.about }}
+      <a href="#about" class="arrow-center" aria-label="Scroll to About section">
+        <i class="arrow bounce fa fa-chevron-down"></i>
+      </a>
+    {{ end }}
+  </div>
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ .Site.Data.author.name }}",
+    "jobTitle": "Cloud Support Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Core42"
+    },
+    "knowsAbout": [
+      "Cloud Computing",
+      "DevOps",
+      "Infrastructure Automation",
+      "Open Source"
+    ],
+    "sameAs": [
+      {{ if .Site.Data.author.contactInfo.github }}"https://github.com/{{ .Site.Data.author.contactInfo.github }}"{{ end }},
+      {{ if .Site.Data.author.contactInfo.linkedin }}"https://linkedin.com/in/{{ .Site.Data.author.contactInfo.linkedin }}"{{ end }}
+    ]
+  }
+  </script>
+
+  <!-- Load hero enhancement script -->
+  <script src="{{ "js/hero-enhancements.js" | relURL }}" defer></script>
+</section>
