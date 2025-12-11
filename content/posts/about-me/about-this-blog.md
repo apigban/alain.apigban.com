@@ -9,6 +9,8 @@ menu:
     parent: about-me
     weight: 10
 ---
+# About alain.apigban.com
+
 ## https://alain.apigban.com/posts/
 
 This blog is a journal of adventures in the constantly changing technology, specifically within the context of my homelab. It's driven by a core motivation: to meticulously document the technical challenges I encounter and the solutions I implement. Think of it as a detailed logbook of my explorations, filled with practical, step-by-step guides and illustrative code examples designed to help others navigate similar technical struggles.
@@ -21,12 +23,13 @@ If a post helps even one person overcome a hurdle or provides a new perspective,
 
 The focus on homelab projects is intentional. It reflects a hands-on approach to learning, a deep-seated curiosity about how things work, and a passion for self-hosting and managing my own infrastructure.
 
-### How to Create New Posts
+## How to Create New Posts
 
 * Start by creating content on the directory `content/posts`. Subdirectories under it will be show as post categories on the website.
 
 * To check the formatting, enable live reloads on your machine
-    ```
+
+    ```bash
     hugo server --bind 192.168.2.33 --baseURL http://192.168.2.33 -w
     ```
 
@@ -36,7 +39,7 @@ The focus on homelab projects is intentional. It reflects a hands-on approach to
 
 * Use the playbook [update-blog.yml](https://github.com/apigban/webhost-playbook/blob/main/update-blog.yml) from the [apigban/webhost-playbook](https://github.com/apigban/webhost-playbook) repository:
 
-    ```
+    ```bash
     ansible-galaxy install -r requirements.yml -p roles
 
     ansible-navigator run --eei localhost/role-dev-ee -m stdout update-blog.yml -i inventory/inventory.yml

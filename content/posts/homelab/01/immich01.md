@@ -11,13 +11,13 @@ menu:
 ---
 This post outlines the process for deploying a new version of Immich, a self-hosted photo and video backup solution. The deployment is managed using an Ansible playbook.
 
-### Prerequisites
+## Prerequisites
 
 - Access to the server where Immich is deployed.
 - Ansible installed and configured to manage the target server.
 - The Ansible playbook `update-immich.yaml`.
 
-### Deployment Procedure
+## Deployment Procedure
 
 The deployment process is automated using the provided Ansible playbook (TODO: Publish to github). The playbook performs the following key steps:
 
@@ -104,7 +104,7 @@ The deployment process is automated using the provided Ansible playbook (TODO: P
     - **Network:** Connected to the `immich_network`.
     - **Environment Variables:** Database and Redis connection details are configured.
 
-### Running the Playbook
+## Running the Playbook
 
 To execute the playbook, navigate to the directory containing the `update-immich.yaml` file and run the following Ansible command:
 
@@ -114,7 +114,7 @@ ansible-navigator run --eei localhost/role-dev-ee -m stdout update-immich.yaml -
 
 Ansible will connect to the target host (`mediaserver`) and execute the tasks defined in the playbook.
 
-### Verification
+## Verification
 
 After the playbook execution completes, verify the successful deployment by checking the running container versions. This can be done using `podman ps` on the target server. Ensure the `immich_server` and `immich_machine_learning` containers are running with the expected `release_version`.
 

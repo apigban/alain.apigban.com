@@ -46,6 +46,9 @@ outputs:
 # Enable global emoji support
 enableEmoji: true
 
+# Disable sitemap generation temporarily
+disableKinds: [sitemap]
+
 # Site parameters
 params:
   # GitHub repo URL of your site
@@ -78,3 +81,6 @@ params:
   # Configure footer
   footer:
     enable: True
+
+  # Custom CSS for readability improvements
+  customCSS: ["css/custom.css"]

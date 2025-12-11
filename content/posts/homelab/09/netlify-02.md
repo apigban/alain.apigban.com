@@ -47,10 +47,10 @@ Here's a breakdown of the steps I followed:
 **Set Environment Variables**: I configured the necessary environment variables. These are the ones that worked for my setup:
 
 ```bash
-        GO_VERSION=1.23
-        HUGO_ENV=production
-        HUGO_VERSION=0.138.0
-        TZ=Asia/Dubai
+GO_VERSION=1.23
+HUGO_ENV=production
+HUGO_VERSION=0.138.0
+TZ=Asia/Dubai
 ```
 
 ## Deployment Process
@@ -83,7 +83,7 @@ This is the starting phase of the deployment process. Based on the logs, Netlify
 
 In this phase, Netlify transforms the source content (my Hugo website's repository) into static files. The logs show the command used to generate static files and build statistics.
 
-```bash
+```text
         2:46:41 AM: $ hugo
         2:46:41 AM: Start building sites …
         2:46:41 AM: hugo v0.138.0-ad82998d54b3f9f8c2741b67356813b55b3134b9+extended linux/amd64 BuildDate=2024-11-06T11:22:34Z VendorInfo=gohugoio
@@ -107,7 +107,7 @@ During this phase, Netlify transfers the built website files from the build envi
 
 The logs indicate that the `./public` folder is the source of the files. This is the default output directory for Hugo:  https://gohugo.io/getting-started/usage/#build-your-site
 
-```bash
+```text
         2:46:43 AM: Starting to deploy site from public
         Files are uploaded to Netlify's CDN.
 
@@ -123,7 +123,7 @@ The logs indicate that the `./public` folder is the source of the files. This is
 ### Cleanup
 This phase focuses on caching build artifacts to optimize future builds. Netlify cached various dependencies and build outputs, including Node.js modules, build plugins, the mise cache, and the Corepack cache.
 
-```bash
+```text
         2:46:44 AM: Netlify Build Complete
         2:46:44 AM: ────────────────────────────────────────────────────────────────
         2:46:44 AM: ​

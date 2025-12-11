@@ -22,16 +22,16 @@ No Database container, no immich.
 
 I've examined the logs of the `immich_postgres` container via `podman start immich_postgres` and `podman logs -f 30 immich_postgres` and found:
 
-```bash
+```text
 2024-12-27 15:45:09.628 UTC [13903] STATEMENT:  INSERT INTO "assets"("id", "deviceAssetId", "ownerId", "libraryId", "deviceId", "type", "status", "originalPath", "thumbhash", "encodedVideoPath", "createdAt", "updatedAt", "deletedAt", "fileCreatedAt", "localDateTime", "fileModifiedAt", "isFavorite", "isArchived", "isExternal", "isOffline", "checksum", "duration", "isVisible", "livePhotoVideoId", "originalFileName", "sidecarPath", "stackId", "duplicateId") VALUES (DEFAULT, $1, $2, $3, $4, $5, DEFAULT, $6, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, $7, $8, $9, $10, $11, DEFAULT, DEFAULT, $12, $13, $14, DEFAULT, $15, DEFAULT, DEFAULT, DEFAULT) RETURNING "id", "status", "encodedVideoPath", "createdAt", "updatedAt", "deletedAt", "isFavorite", "isArchived", "isExternal", "isOffline", "isVisible"
 2025-01-04 07:06:34.716 UTC [1] LOG:  received smart shutdown request
 chmod: changing permissions of '/var/lib/postgresql/data': Operation not permitted
 chmod: changing permissions of '/var/run/postgresql': Operation not permitted
-find: ‘/var/lib/postgresql/data’: Permission denied
+find: '/var/lib/postgresql/data': Permission denied
 chown: changing ownership of '/var/lib/postgresql/data': Operation not permitted
 chmod: changing permissions of '/var/lib/postgresql/data': Operation not permitted
 chmod: changing permissions of '/var/run/postgresql': Operation not permitted
-find: ‘/var/lib/postgresql/data’: Permission denied
+find: '/var/lib/postgresql/data': Permission denied
 chown: changing ownership of '/var/lib/postgresql/data': Operation not permitted
 ```
 
@@ -66,10 +66,10 @@ The VM was rejoined to the IPA domain using the following command:
 ##### 4. Centralized SubID Re-enablement
 Centralized management of subIDs was re-enabled by adding `sss` to the `subid` line in `/etc/nsswitch.conf`:
    ```yaml
-   ...
-   subid:   sss
-   ...
-   ```
+...
+subid: sss
+...
+```
 
 ##### 5. Verification and Removal of Local SubID Configurations
 I made sure that `/etc/subuid` and `/etc/subgid` had no entries related to `container-service-account`. 
@@ -87,12 +87,12 @@ The VM was restarted. After logging in as `container-service-account`, the comma
 The containers, including `immich_postgres`, were running:
 
    ```bash
-   CONTAINER ID  IMAGE                                                                                                                   COMMAND               CREATED       STATUS         PORTS                   NAMES
-   877af9be8b20  registry.hub.docker.com/tensorchord/pg... postgres -c share... 9 months ago  Up 53 minutes                          immich_postgres
-   2d0972e9c5e3  registry.hub.docker.com/library/redis@sha256:51d6c...           redis-server          9 months ago  Up 53 minutes                          immich_redis
-   b20d9b6d407d  ghcr.io/immich-app/immich-server:v1.118.0                                                                               start.sh              2 months ago  Up 52 minutes  0.0.0.0:2283->2283/tcp  immich_server
-   71b2999c35ee  ghcr.io/immich-app/immich-machine-learning:v1.118.0                                                                     ./start.sh            2 months ago
-   ```
+CONTAINER ID  IMAGE                                                                                                                   COMMAND               CREATED       STATUS         PORTS                   NAMES
+877af9be8b20  registry.hub.docker.com/tensorchord/pg... postgres -c share... 9 months ago  Up 53 minutes                          immich_postgres
+2d0972e9c5e3  registry.hub.docker.com/library/redis@sha256:51d6c...           redis-server          9 months ago  Up 53 minutes                          immich_redis
+b20d9b6d407d  ghcr.io/immich-app/immich-server:v1.118.0                                                                               start.sh              2 months ago  Up 52 minutes  0.0.0.0:2283->2283/tcp  immich_server
+71b2999c35ee  ghcr.io/immich-app/immich-machine-learning:v1.118.0                                                                     ./start.sh            2 months ago
+```
 
 ##### 8. Web Application Verification
 Accessing the Immich web interface confirmed the service was functioning correctly.

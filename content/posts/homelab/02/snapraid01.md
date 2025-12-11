@@ -9,7 +9,7 @@ menu:
     parent: Homelab
     weight: 10
 ---
-### Initial Homelab Storage Configuration and Limitations
+## Initial Homelab Storage Configuration and Limitations
 
 My initial homelab storage solution comprised a RAID5 array utilizing four Toshiba N300 NAS drives within a prebuilt 4-bay NAS. While the low initial cost was a primary factor in the selection, the long-term operational limitations of this configuration became apparent.
 
@@ -23,7 +23,7 @@ A critical concern was the lack of user-serviceable components within the NAS. H
 
 Finally, the NAS' RAID5 implementation, while accommodating disks of varying capacities, presented a significant challenge. The proprietary combination of RAID5 and Logical Volume Management (LVM) meant that I cannot perform a direct migration of the disks to a different system, hindering data portability and recovery options.
 
-### Migration Strategy
+## Migration Strategy
 
 Given these limitations, I needed to revise the storage configuration, focusing on data preservation, improved flexibility, and enhanced data integrity. The following steps outline the planned migration:
 

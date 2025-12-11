@@ -1,0 +1,224 @@
+/* Custom CSS for improved readability on alain.apigban.com */
+
+/* Base typography improvements */
+body {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Optimal content width for reading */
+.article-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Better paragraph spacing */
+p {
+  margin-bottom: 1.2em;
+}
+
+/* Heading hierarchy improvements */
+h1 {
+  font-size: 2.2em;
+  line-height: 1.3;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.8em;
+  line-height: 1.3;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-weight: 600;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eee;
+}
+
+h3 {
+  font-size: 1.4em;
+  line-height: 1.3;
+  margin-top: 1.8em;
+  margin-bottom: 0.8em;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.2em;
+  line-height: 1.3;
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
+  font-weight: 600;
+}
+
+/* Code block improvements */
+pre {
+  background-color: #f6f8fa;
+  border-radius: 6px;
+  padding: 16px;
+  overflow-x: auto;
+  margin-bottom: 1.5em;
+  line-height: 1.45;
+}
+
+code {
+  background-color: rgba(175, 184, 193, 0.2);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.9em;
+}
+
+/* List improvements */
+ul, ol {
+  margin-bottom: 1.2em;
+  padding-left: 2em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .article-content {
+    padding: 0 15px;
+  }
+
+  h1 {
+    font-size: 1.9em;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  h4 {
+    font-size: 1.15em;
+  }
+
+  pre {
+    padding: 12px;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  .article-content {
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 1.7em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #e1e4e8;
+  }
+
+  h1, h2, h3, h4 {
+    color: #f0f6fc;
+  }
+
+  h2 {
+    border-bottom-color: #30363d;
+  }
+
+  pre {
+    background-color: #161b22;
+  }
+
+  code {
+    background-color: rgba(110, 118, 129, 0.4);
+  }
+
+  blockquote {
+    color: #8b949e;
+    border-left-color: #30363d;
+    background-color: #161b22;
+  }
+
+  table {
+    border-color: #30363d;
+  }
+
+  th {
+    background-color: #161b22;
+  }
+
+  th, td {
+    border-color: #30363d;
+  }
+}
+
+/* Better link styling */
+a {
+  color: #0066cc;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+a:hover {
+  border-bottom-color: #0066cc;
+}
+
+/* Improved table styling */
+table {
+  margin: 1.5em 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.75em;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Blockquote styling */
+blockquote {
+  margin: 1.5em 0;
+  padding: 0.5em 1.5em;
+  border-left: 4px solid #0066cc;
+  background-color: #f8f9fa;
+}
